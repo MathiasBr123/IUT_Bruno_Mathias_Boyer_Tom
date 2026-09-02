@@ -18,6 +18,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>main.c</itemPath>
+      <itemPath>ChipConfig.C</itemPath>
+      <itemPath>ChipConfig.h</itemPath>
+      <itemPath>IO.c</itemPath>
+      <itemPath>IO.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
