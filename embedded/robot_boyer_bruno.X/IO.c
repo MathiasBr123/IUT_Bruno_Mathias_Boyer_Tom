@@ -23,8 +23,8 @@ void InitIO()
     _TRISJ4 = 0;  // LED Orange
     _TRISJ6 = 0; //LED Blanche
     _TRISJ5 = 0; // LED Bleue
-    _TRISJ11 = 0; // LED Rouge
-    _TRISH10 = 0; // LED Verte 
+    _TRISH10 = 0; // LED Rouge
+    _TRISJ11 = 0; // LED Verte 
     
 
     
