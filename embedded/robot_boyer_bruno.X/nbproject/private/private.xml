@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/E306-PC3/Documents/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/PWM.c</file>
-            <file>file:/C:/Users/E306-PC3/Documents/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/Toolbox.c</file>
-            <file>file:/C:/Users/E306-PC3/Documents/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/ChipConfig.h</file>
-            <file>file:/C:/Users/E306-PC3/Documents/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/main.c</file>
-            <file>file:/C:/Users/E306-PC3/Documents/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/timer.c</file>
-            <file>file:/C:/Users/E306-PC3/Documents/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/PWM.h</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

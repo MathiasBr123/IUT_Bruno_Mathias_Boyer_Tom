@@ -45,14 +45,20 @@ void InitTimer23(void) {
 }
 //Interruption du timer 32 bits sur 2-3
 
-unsigned char toggle= 0;
+unsigned char toggle = 0;
 
 void __attribute__((interrupt, no_auto_psv)) _T3Interrupt(void) {
     IFS0bits.T3IF = 0; // Clear Timer3 Interrupt Flag
     LED_ORANGE_1 = !LED_ORANGE_1;
+
     toggle = !toggle;
-    if(toggle==1)
-        PWMSetSpeed(20);
-    else
-        PWMSetSpeed(-20);
+
+    if (toggle == 1) {
+        PWMSetSpeed(20, MOTOR_GAUCHE);
+        PWMSetSpeed(20, MOTOR_DROIT);
+
+    } else {
+        PWMSetSpeed(-20, MOTOR_GAUCHE);
+        PWMSetSpeed(-20, MOTOR_DROIT);
+    }
 }
