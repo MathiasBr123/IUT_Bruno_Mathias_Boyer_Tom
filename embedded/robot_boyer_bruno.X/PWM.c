@@ -1,6 +1,7 @@
 #include <xc.h>
 #include "IO.h"
 #include "PWM.h"
+#include "Toolbox.h"
 
 #define PWMPER 24.0
 
@@ -21,8 +22,14 @@ void InitPWM(void) {
 }
 double talon = 50;
 
-void PWMSetSpeed(float vitesseEnPourcents) {
-    PDC1 = vitesseEnPourcents * PWMPER + talon;
-    SDC1 = talon;
+void PWMSetSpeed(float vitesseEnPourcents) {        
+    if(vitesseEnPourcents >=0){
+        PDC1 = vitesseEnPourcents * PWMPER + talon;
+        SDC1 = talon;
+        
+    }else if(vitesseEnPourcents < 0){        
+        PDC1 = talon;
+        SDC1 = Abs(vitesseEnPourcents) * PWMPER + talon; 
+    }
 }
 

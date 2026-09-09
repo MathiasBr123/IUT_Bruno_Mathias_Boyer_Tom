@@ -15,7 +15,7 @@ int main(void) {
     InitPWM();
     
     //Le PWM est set a 20%
-    PWMSetSpeed(0); //Pour 70% TP_M1_PMWH : 14.30 us +Width
+     //Pour 70% TP_M1_PMWH : 14.30 us +Width
                      //Pour 70% TP_M1_PMWL : 413.2 ns +Width
     
     LED_BLANCHE_1 = 1;
