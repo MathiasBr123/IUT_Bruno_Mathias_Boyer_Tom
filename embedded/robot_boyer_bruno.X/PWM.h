@@ -12,7 +12,11 @@
 #define MOTOR_DROIT 1
 
 void InitPWM(void);
+
+//La fonction ne doit plus être utiliser
 void PWMSetSpeed(float vitesseEnPourcents, uint8_t motor);
+
+void PWMSetSpeedConsigne(float vitesseEnPourcents, uint8_t motor);
 
 #endif	/* PWM_H */
 

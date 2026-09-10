@@ -1,9 +1,12 @@
 #include <xc.h>
 #include "IO.h"
 #include "PWM.h"
+#include "Robot.h"
 #include "Toolbox.h"
 
 #define PWMPER 24.0
+
+volatile ROBOT_STATE_BITS robotState;
 
 void InitPWM(void) {
     PTCON2bits.PCLKDIV = 0b000; //Divide by 1
@@ -44,3 +47,10 @@ void PWMSetSpeed(float vitesseEnPourcents, uint8_t motor) {
     }
 }
 
+void PWMSetSpeedConsigne(float vitesseEnPourcents, uint8_t motor){
+    if(motor == 0){
+        robotState.vitesseGaucheConsigne = vitesseEnPourcents;
+    }else if(motor == 1){
+        robotState.vitesseDroiteConsigne = vitesseEnPourcents;
+    }
+}
