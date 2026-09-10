@@ -2,6 +2,7 @@
 #include "timer.h"
 #include "IO.h"
 #include "PWM.h"
+#include "Robot.h"
 //Initialisation d?un timer 16 bits
 
 void InitTimer1(void) {
