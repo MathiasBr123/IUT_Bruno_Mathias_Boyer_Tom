@@ -14,8 +14,10 @@ typedef struct robotStateBITS {
 } ROBOT_STATE_BITS;
 
 extern volatile ROBOT_STATE_BITS robotState;
+extern double talon;
 
-const uint8_t acceleration = 5;
+
+
 
 void PWMUpdateSpeed(void);
 

@@ -10,6 +10,7 @@
       <itemPath>Robot.h</itemPath>
       <itemPath>Toolbox.h</itemPath>
       <itemPath>PWM.h</itemPath>
+      <itemPath>ADC.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -30,6 +31,7 @@
       <itemPath>Robot.c</itemPath>
       <itemPath>Toolbox.c</itemPath>
       <itemPath>PWM.c</itemPath>
+      <itemPath>ADC.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -44,9 +46,9 @@
         <targetDevice>dsPIC33EP512MU814</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD4Tool</platformTool>
+        <platformTool>ICD5Tool</platformTool>
         <languageToolchain>XCDSC</languageToolchain>
-        <languageToolchainVersion>3.31.00</languageToolchainVersion>
+        <languageToolchainVersion>3.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -209,6 +211,11 @@
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
       </C30Global>
+      <ICD5Tool>
+        <property key="memories.programmemory.ranges" value="0-7fffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/debug/default/robot_boyer_bruno_ptg"/>
+      </ICD5Tool>
     </conf>
   </confs>
 </configurationDescriptor>

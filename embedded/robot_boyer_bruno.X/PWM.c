@@ -4,8 +4,6 @@
 #include "Robot.h"
 #include "Toolbox.h"
 
-#define PWMPER 24.0
-
 volatile ROBOT_STATE_BITS robotState;
 
 void InitPWM(void) {
@@ -23,7 +21,6 @@ void InitPWM(void) {
     /* Enable PWM Module */
     PTCONbits.PTEN = 1;
 }
-double talon = 50;
 
 void PWMSetSpeed(float vitesseEnPourcents, uint8_t motor) {
     if (motor == 0) {

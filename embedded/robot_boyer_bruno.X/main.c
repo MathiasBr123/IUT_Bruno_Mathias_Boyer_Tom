@@ -5,6 +5,7 @@
 #include "IO.h"
 #include "timer.h"
 #include "PWM.h"
+#include "ADC.h"
 
 int main(void) {
 
@@ -13,12 +14,13 @@ int main(void) {
     InitTimer23();
     InitTimer1();
     InitPWM();
+    InitADC1();
     
     //Le PWM est set a 20%
     //Pour 70% TP_M1_PMWH : 14.30 us +Width
     //Pour 70% TP_M1_PMWL : 413.2 ns +Width
-    PWMSetSpeedConsigne(20);
-    PWMSetSpeedConsigne(20);
+   PWMSetSpeedConsigne(0, MOTOR_GAUCHE);
+   PWMSetSpeedConsigne(0, MOTOR_DROIT);
     
     LED_BLANCHE_1 = 1;
     LED_BLEUE_1 = 1;
@@ -33,7 +35,11 @@ int main(void) {
     LED_VERTE_2 = 1;
     
     while(1){
-        ; 
+        if(ADCConversionFinishedFlag){
+            ADCClearConversionFinishedFlag();
+            unsigned int * result = ADCGetResult();
+
+        }
     }
 }
 

@@ -1,7 +1,13 @@
+#include <xc.h>
 #include "robot.h"
 #include "Toolbox.h"
+#include "PWM.h"
 
-volatile ROBOT_STATE_BITS robotState;
+//volatile ROBOT_STATE_BITS robotState;
+
+const uint8_t acceleration = 5;
+
+double talon = 50;
 
 void PWMUpdateSpeed() {
     // Cette fonction est appelee sur timer et permet de suivre des rampes d acceleration

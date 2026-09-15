@@ -15,22 +15,23 @@
 # $ makeMP_CC="/opt/microchip/mplabc30/v3.30c/bin/pic30-gcc" ...  
 #
 SHELL=cmd.exe
-PATH_TO_IDE_BIN=D:/Programmes/Logiciel/MPLAB/mplab_platform/platform/../mplab_ide/modules/../../bin/
+PATH_TO_IDE_BIN=C:/Program Files/Microchip/MPLABX/v6.25/mplab_platform/platform/../mplab_ide/modules/../../bin/
 # Adding MPLAB X bin directory to path.
-PATH:=D:/Programmes/Logiciel/MPLAB/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
+PATH:=C:/Program Files/Microchip/MPLABX/v6.25/mplab_platform/platform/../mplab_ide/modules/../../bin/:$(PATH)
 # Path to java used to run MPLAB X when this makefile was created
-MP_JAVA_PATH="D:\Programmes\Logiciel\MPLAB\sys\java\zulu8.86.0.25-ca-fx-jre8.0.452-win_x64/bin/"
+MP_JAVA_PATH="C:\Program Files\Microchip\MPLABX\v6.25\sys\java\zulu8.80.0.17-ca-fx-jre8.0.422-win_x64/bin/"
 OS_CURRENT="$(shell uname -s)"
-MP_CC="C:\Program Files\Microchip\xc-dsc\v3.31\bin\xc-dsc-gcc.exe"
+MP_CC="C:\Program Files\Microchip\xc-dsc\v3.30\bin\xc-dsc-gcc.exe"
 # MP_CPPC is not defined
 # MP_BC is not defined
-MP_AS="C:\Program Files\Microchip\xc-dsc\v3.31\bin\xc-dsc-as.exe"
-MP_LD="C:\Program Files\Microchip\xc-dsc\v3.31\bin\xc-dsc-ld.exe"
-MP_AR="C:\Program Files\Microchip\xc-dsc\v3.31\bin\xc-dsc-ar.exe"
-DEP_GEN=${MP_JAVA_PATH}java -jar "D:/Programmes/Logiciel/MPLAB/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
-MP_CC_DIR="C:\Program Files\Microchip\xc-dsc\v3.31\bin"
+MP_AS="C:\Program Files\Microchip\xc-dsc\v3.30\bin\xc-dsc-as.exe"
+MP_LD="C:\Program Files\Microchip\xc-dsc\v3.30\bin\xc-dsc-ld.exe"
+MP_AR="C:\Program Files\Microchip\xc-dsc\v3.30\bin\xc-dsc-ar.exe"
+DEP_GEN=${MP_JAVA_PATH}java -jar "C:/Program Files/Microchip/MPLABX/v6.25/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
+MP_CC_DIR="C:\Program Files\Microchip\xc-dsc\v3.30\bin"
 # MP_CPPC_DIR is not defined
 # MP_BC_DIR is not defined
-MP_AS_DIR="C:\Program Files\Microchip\xc-dsc\v3.31\bin"
-MP_LD_DIR="C:\Program Files\Microchip\xc-dsc\v3.31\bin"
-MP_AR_DIR="C:\Program Files\Microchip\xc-dsc\v3.31\bin"
+MP_AS_DIR="C:\Program Files\Microchip\xc-dsc\v3.30\bin"
+MP_LD_DIR="C:\Program Files\Microchip\xc-dsc\v3.30\bin"
+MP_AR_DIR="C:\Program Files\Microchip\xc-dsc\v3.30\bin"
+DFP_DIR=C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/dsPIC33E-GM-GP-MC-GU-MU_DFP/1.6.297

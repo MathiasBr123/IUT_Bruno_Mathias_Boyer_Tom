@@ -11,6 +11,8 @@
 #define MOTOR_GAUCHE 0
 #define MOTOR_DROIT 1
 
+#define PWMPER 24.0
+
 void InitPWM(void);
 
 //La fonction ne doit plus être utiliser
