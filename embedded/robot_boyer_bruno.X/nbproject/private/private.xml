@@ -5,10 +5,11 @@
         <group>
             <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/PWM.c</file>
             <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/main.c</file>
+            <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/timer.h</file>
             <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/PWM.h</file>
+            <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/main.h</file>
             <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/Robot.c</file>
             <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/Robot.h</file>
-            <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/ADC.h</file>
             <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/ADC.c</file>
             <file>file:/C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/timer.c</file>
         </group>

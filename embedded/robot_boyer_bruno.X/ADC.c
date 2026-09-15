@@ -26,7 +26,7 @@ AD1CON1bits.SSRC = 0b111; // 111 = Internal counter ends sampling and starts con
 AD1CON2bits.VCFG = 0b000; // 000 : Voltage Reference = AVDD AVss
 AD1CON2bits.CSCNA = 1; // 1 : Enable Channel Scanning
 AD1CON2bits.CHPS = 0b00; // Converts CH0 only
-AD1CON2bits.SMPI = 2; // 2+1 conversions successives avant interrupt
+AD1CON2bits.SMPI = 4; // 2+1 conversions successives avant interrupt
 AD1CON2bits.ALTS = 0;
 AD1CON2bits.BUFM = 0;
 /************************************************************/
@@ -42,13 +42,19 @@ AD1CON4bits.ADDMAEN = 0; // DMA is not used
 /************************************************************/
 //Configuration des ports
 /************************************************************/
-//ADC éutiliss : 8(B8)-9(B9)-10(B10)
+//ADC éutiliss : 8(B8)-9(B9)-10(B10)*
+ANSELBbits.ANSB0 = 1;
 ANSELBbits.ANSB8 = 1;
 ANSELBbits.ANSB9 = 1;
 ANSELBbits.ANSB10 = 1;
+ANSELBbits.ANSB11 = 1;
+
+AD1CSSLbits.CSS0=1; // Enable AN8 for scan
 AD1CSSLbits.CSS8=1; // Enable AN8 for scan
 AD1CSSLbits.CSS9=1; // Enable AN9 for scan
 AD1CSSLbits.CSS10=1; // Enable AN10 for scan
+AD1CSSLbits.CSS11=1; // Enable AN8 for scan
+
 /* Assign MUXA inputs */
 AD1CHS0bits.CH0SA = 0;// CH0SA bits ignored for CH0 +ve input selection
 AD1CHS0bits.CH0NA = 0;// Select VREF- for CH0 -ve inpu
@@ -62,7 +68,9 @@ void __attribute__((interrupt, no_auto_psv)) _AD1Interrupt(void)
 IFS0bits.AD1IF = 0;
 ADCResult[0] = ADC1BUF0;// Read the AN-scan input 1 conversion result
 ADCResult[1] = ADC1BUF1;// Read the AN3 conversion result
-ADCResult[2] = ADC1BUF2;// Read the AN5 conversion result
+ADCResult[2] = ADC1BUF2;
+ADCResult[3] = ADC1BUF3;
+ADCResult[4] = ADC1BUF4;
 ADCConversionFinishedFlag = 1;
 }
 void ADC1StartConversionSequence()

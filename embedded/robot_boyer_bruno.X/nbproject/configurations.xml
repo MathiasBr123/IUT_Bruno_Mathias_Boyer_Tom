@@ -11,6 +11,7 @@
       <itemPath>Toolbox.h</itemPath>
       <itemPath>PWM.h</itemPath>
       <itemPath>ADC.h</itemPath>
+      <itemPath>main.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -216,6 +217,11 @@
         <property key="programmerToGoFilePath"
                   value="C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/debug/default/robot_boyer_bruno_ptg"/>
       </ICD5Tool>
+      <Tool>
+        <property key="memories.programmemory.ranges" value="0-7fffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Github/IUT_Bruno_Mathias_Boyer_Tom/embedded/robot_boyer_bruno.X/debug/default/robot_boyer_bruno_ptg"/>
+      </Tool>
     </conf>
   </confs>
 </configurationDescriptor>
