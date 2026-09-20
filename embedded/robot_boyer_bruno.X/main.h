@@ -35,8 +35,13 @@
 #define OBSTACLE_A_GAUCHE_PROCHE 8
 #define OBSTACLE_A_ExGAUCHE_PROCHE 9
 
+#define ROTATION_P 20
+
 void OperatingSystemLoop(void);
-void SetNextRobotStateInAutomaticMode();
+void SetNextRobotStateInAutomaticMode(void);
+void VectorielMobilityLowObstacle(void);
+void OperatingMotor(void);
+
 
 #endif	/* MAIN_H */
 
