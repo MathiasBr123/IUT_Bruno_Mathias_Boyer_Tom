@@ -5,7 +5,7 @@
 
 //volatile ROBOT_STATE_BITS robotState;
 
-const uint8_t acceleration = 12;
+const uint8_t acceleration = 50;
 
 double talon = 50;
 

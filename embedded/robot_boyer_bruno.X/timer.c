@@ -18,7 +18,7 @@ void InitTimer1(void) {
     //01 = 1:8 prescale value
     //00 = 1:1 prescale value
     T1CONbits.TCS = 0; //clock source = internal clock
-    SetFreqTimer1(50);
+    SetFreqTimer1(125);
     //Pour obtenir 6k Hz ox0271 prescaler 0b01
     //Pout obtenir 50 Hz ox249F prescaler 0b10
     IFS0bits.T1IF = 0; // Clear Timer Interrupt Flag
