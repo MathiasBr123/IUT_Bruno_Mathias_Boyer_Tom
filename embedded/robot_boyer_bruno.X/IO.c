@@ -29,7 +29,9 @@ void InitIO()
     _TRISA9 = 0;
     _TRISK15 = 0;
     _TRISA10 = 0;
-    _TRISH3 = 0; 
+    _TRISH3 = 0;
+    
+    _TRISH1 = 1;
     
 
     
