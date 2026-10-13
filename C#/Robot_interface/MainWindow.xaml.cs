@@ -34,16 +34,9 @@ namespace Robot_interface
         private void bouttonEnvoyer_Click(object sender, RoutedEventArgs e)
         {
             String message = TextBoxEmission.Text;
-            int firstPrint = 0;
 
-            if (firstPrint == 0)
-            {
-                TextBoxReception.AppendText("Recu : " + message +"\n");
-                firstPrint = 0;
-            }else if (firstPrint == 1)
-            {
-                TextBoxReception.AppendText("\nRecu : " + message);
-            }
+            TextBoxReception.AppendText("Recu : " + message +"\n");
+         
             TextBoxEmission.Clear();
         }
     }
