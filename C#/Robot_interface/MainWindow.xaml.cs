@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Runtime.CompilerServices;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,6 +9,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ExtendedSerialPort_NS;
+using System.IO.Ports;
 
 namespace Robot_interface
 {
@@ -16,9 +19,13 @@ namespace Robot_interface
     /// </summary>
     public partial class MainWindow : Window
     {
+        ExtendedSerialPort serialPort1;
         public MainWindow()
         {
             InitializeComponent();
+            serialPort1 = new ExtendedSerialPort("COM8", 115200, Parity.None, 8, StopBits.One);
+            serialPort1.DataReceived += SerialPort1_DataReceived;
+            serialPort1.Open();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -33,11 +40,28 @@ namespace Robot_interface
 
         private void bouttonEnvoyer_Click(object sender, RoutedEventArgs e)
         {
-            String message = TextBoxEmission.Text;
+            SendMessage();
+        }
 
-            TextBoxReception.AppendText("Recu : " + message +"\n");
-         
-            TextBoxEmission.Clear();
+        private void TextBoxEmission_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                SendMessage();
+            }
+        }
+
+        private void SendMessage()
+        {
+                String message = TextBoxEmission.Text;
+
+                serialPort1.WriteLine(message);
+
+                TextBoxEmission.Clear();
+        }
+        public void SerialPort1_DataReceived(object sender, DataReceivedArgs e)
+        {
+            TextBoxReception.Text += Encoding.UTF8.GetString(e.Data, 0, e.Data.Length);
         }
     }
 }
