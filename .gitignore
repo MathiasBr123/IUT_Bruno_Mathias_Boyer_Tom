@@ -427,3 +427,25 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# ------------------------------------------------------------
+# macOS
+# ------------------------------------------------------------
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+
+# ------------------------------------------------------------
+# MPLAB X (fichiers generes a chaque compilation / propres au PC)
+# ------------------------------------------------------------
+**/*.X/build/
+**/*.X/dist/
+**/*.X/debug/
+**/*.X/.generated_files/
+**/*.X/queuelogs/
+**/*.X/nbproject/private/
+**/*.X/nbproject/Package-*.bash
+**/*.X/defmplabxtrace.log*
+**/*.X/disassembly/
+**/*.X/.vscode/

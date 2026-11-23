@@ -1,11 +1,11 @@
 #include <xc.h>
-#include "robot.h"
+#include "Robot.h"
 #include "Toolbox.h"
 #include "PWM.h"
 
 //volatile ROBOT_STATE_BITS robotState;
 
-const uint8_t acceleration = 30;
+const uint8_t acceleration = 50;
 
 double talon = 50;
 
