@@ -11,7 +11,7 @@
             <RowDefinition/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -25,8 +25,8 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button x:Name="bouttonEnvoyer"  Content="Envoyer" Width="100" Margin="5,5,5,5" Click="bouttonEnvoyer_Click"/>
-            <Button x:Name="bouttonTest"  Content="Teste" Width="100" Margin="5,5,5,5" Click="bouttonEnvoyer_Click"/>
             <Button x:Name="bouttonNULL"  Content="Clear" Width="100" Margin="5,5,5,5" Click="bouttonClear"/>
+            <Button x:Name="bouttonTest"  Content="Teste" Width="100" Click="bouttonTest_Click"/>
         </StackPanel>
     </Grid>
 </Window>

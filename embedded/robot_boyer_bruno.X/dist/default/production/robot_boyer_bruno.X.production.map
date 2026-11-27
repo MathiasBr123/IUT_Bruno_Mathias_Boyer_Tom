@@ -22,7 +22,7 @@ Command:
   build/default/production/ADC.o \
   --local-stack \
   --defsym=__MPLAB_BUILD=1 \
-  -Tp33EP512MU814.00013fe4.00 \
+  -Tp33EP512MU814.000022f8.00 \
   --stack=16 \
   --check-sections \
   --data-init \

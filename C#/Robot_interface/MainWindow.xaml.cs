@@ -23,6 +23,7 @@ namespace Robot_interface
         ExtendedSerialPort serialPort1;
         String receivedText;
         DispatcherTimer timerAffichage;
+        Robot robot = new Robot();
 
         public MainWindow()
         {
@@ -39,10 +40,10 @@ namespace Robot_interface
         }
         private void TimerAffichage_Tick(object? sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(receivedText))
+            if (!string.IsNullOrEmpty(robot.receivedText))
             {
-                TextBoxReception.AppendText("Reçu : " + receivedText);
-                receivedText = "";
+                TextBoxReception.AppendText("Reçu : " + robot.receivedText);
+                robot.receivedText = "";
             }
         }
 
@@ -79,12 +80,28 @@ namespace Robot_interface
         }
         public void SerialPort1_DataReceived(object sender, DataReceivedArgs e)
         {
-            receivedText += Encoding.UTF8.GetString(e.Data, 0, e.Data.Length);
+            robot.receivedText += Encoding.UTF8.GetString(e.Data, 0, e.Data.Length);
+
+            while (serialPort1.BytesToRead > 0)
+            {
+                byte data = (byte)serialPort1.ReadByte();
+                robot.byteListReceived.Enqueue(data);
+            }
         }
 
         private void bouttonClear(object sender, RoutedEventArgs e)
         {
             TextBoxReception.Clear();
+        }
+
+        private void bouttonTest_Click(object sender, RoutedEventArgs e)
+        {
+            byte[] byteList = new byte[20];
+            for(int i = 0; i < byteList.Length; i++)
+            {
+                byteList[i] = (byte)(2*i);
+                serialPort1.WriteLine("Recu : Byte [" + i + "]" + byteList[i]);
+            }
         }
     } 
 }
