@@ -40,10 +40,10 @@ namespace Robot_interface
         }
         private void TimerAffichage_Tick(object? sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(robot.receivedText))
+            for (int i = 0; i < robot.byteListReceived.Count; i++)
             {
-                TextBoxReception.AppendText("Reçu : " + robot.receivedText);
-                robot.receivedText = "";
+                byte b = robot.byteListReceived.Dequeue();
+                TextBoxReception.AppendText("0X" + b.ToString("X2" + "")); 
             }
         }
 
@@ -82,10 +82,9 @@ namespace Robot_interface
         {
             robot.receivedText += Encoding.UTF8.GetString(e.Data, 0, e.Data.Length);
 
-            while (serialPort1.BytesToRead > 0)
+            for(int i = 0; i < e.Data.Length; i++)
             {
-                byte data = (byte)serialPort1.ReadByte();
-                robot.byteListReceived.Enqueue(data);
+                robot.byteListReceived.Enqueue(e.Data[i]);
             }
         }
 
